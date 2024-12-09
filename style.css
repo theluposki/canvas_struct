@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --w_app: 100svw;
+  --h_app: 100svh;
+}
+
+body {
+  background-color: #ddd;
+  min-width: var(--w_app);
+  max-width: var(--w_app);
+  min-height: var(--h_app);
+  max-height: var(--h_app);
+}
+
+#app {
+  position: relative;
+  min-width: var(--w_app);
+  max-width: var(--w_app);
+  min-height: var(--h_app);
+  max-height: var(--h_app);
+  overflow: hidden;
+
+  --w_btn_lr: 50%;
+  --h_btn_lr: 100%;
+  --w_btn_center: 100%;
+  --h_btn_center: 100px;
+}
+
+#canvas {
+  background-color: #fff;
+  min-width: var(--w_app);
+  max-width: var(--w_app);
+  min-height: var(--h_app);
+  max-height: var(--h_app);
+}
+
+.left,
+.right,
+.center {
+  position: absolute;
+
+  background-color: transparent;
+  z-index: 2;
+}
+
+.left,
+.right {
+  min-width: var(--w_btn_lr);
+  max-height: var(--w_btn_lr);
+  min-height: var(--h_btn_lr);
+  max-height: var(--h_btn_lr);
+}
+
+.left {
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.right {
+  top: 0;
+  right: 0;
+}
+
+.center {
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+
+  min-width: var(--w_btn_center);
+  max-height: var(--w_btn_center);
+  min-height: var(--h_btn_center);
+  max-height: var(--h_btn_center);
+}
+
+.left:active, .right:active, .center:active {
+    scale: .95;
+    background-color: rgba(255, 255, 255, .2);
+} 
